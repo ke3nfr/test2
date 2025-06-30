@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Night Redemption</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen start-screen" id="start-screen">
+    <div class="content">
+      <h1>Movie Night Redemption</h1>
+      <div class="message-box">
+        <p>Collect hearts ❤️, popcorn 🍿, and tickets 🎟️</p>
+        <p>to unlock our special movie night!</p>
+        <div class="instructions">
+          <p>Use arrow keys or WASD to move</p>
+          <p>Collect 30 items to win!</p>
+        </div>
+      </div>
+      <button onclick="startGame()">Start the Movie</button>
+    </div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div class="screen end-screen" id="end-screen">
+    <div class="content">
+      <div class="confetti-container" id="confetti"></div>
+      <h2>Showtime! 🎬</h2>
+      <div class="message-box">
+        <p>You've unlocked our movie night!</p>
+        <p>Let's make some new memories together ❤️</p>
+      </div>
+      <button onclick="restartGame()">Watch Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (typeof init === "function") {
+        init();
+      }
+    });
+  </script>
+</body>
+</html>
